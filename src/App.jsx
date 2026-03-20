@@ -11,7 +11,7 @@ function App() {
     },
     {
       name: 'Amazon',
-      url: 'https://www.amazon.com/shop/blurrysadgirl/list/1K1NVWSLHWQ1Z?ref_=cm_sw_r_mwn_aipsflist_89MBGBWP3JVRJ3MMPPEB&language=en-US',
+      url: 'https://www.amazon.com/shop/blurrysadgirl',
       icon: <FaAmazon />,
       color: '#FF9900'
     },
