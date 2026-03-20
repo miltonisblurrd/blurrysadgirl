@@ -1,5 +1,5 @@
 import './App.css'
-import { FaYoutube, FaInstagram, FaTiktok, FaTwitter, FaFacebook, FaEnvelope } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaTiktok, FaTwitter, FaFacebook, FaEnvelope, FaAmazon } from 'react-icons/fa'
 
 function App() {
   const socialLinks = [
@@ -8,6 +8,12 @@ function App() {
       url: 'mailto:blurrysadgirl@gmail.com',
       icon: <FaEnvelope />,
       color: '#EA4335'
+    },
+    {
+      name: 'Amazon',
+      url: 'https://www.amazon.com/shop/blurrysadgirl/list/1K1NVWSLHWQ1Z?ref_=cm_sw_r_mwn_aipsflist_89MBGBWP3JVRJ3MMPPEB&language=en-US',
+      icon: <FaAmazon />,
+      color: '#FF9900'
     },
     {
       name: 'YouTube',
