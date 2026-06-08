@@ -5,60 +5,59 @@ import LinkPageLayout from '../components/LinkPageLayout'
 
 const HOME_TITLE = 'Blurrysadgirl | Toy Collecting, Unboxings & Cute Finds'
 
-const socialLinks = [
+const socialIconLinks = [
   {
     name: 'Email for Brand Deals',
     url: 'mailto:blurrysadgirl@gmail.com',
-    icon: <FaEnvelope />,
-    color: '#EA4335'
-  },
-  {
-    name: 'Amazon',
-    url: 'https://www.amazon.com/shop/blurrysadgirl',
-    icon: <FaAmazon />,
-    color: '#FF9900'
-  },
-  {
-    name: '$10 Off Brick Sewer - Code: blurrysadgirl',
-    url: 'https://bricksewer.com/?sca_ref=11103185.WfjMcqQs88',
-    icon: <img src="/brick_sewer_logo.webp" alt="" />,
-    color: '#8B4513'
-  },
-  {
-    name: 'Up for Trade / In Search Of',
-    to: '/up-for-trade',
-    icon: <FaSearch />,
-    color: '#4A4A4A'
+    icon: <FaEnvelope />
   },
   {
     name: 'YouTube',
     url: 'https://www.youtube.com/@blurrysadgirl',
-    icon: <FaYoutube />,
-    color: '#FF0000'
+    icon: <FaYoutube />
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/blurrysadgirl/',
-    icon: <FaInstagram />,
-    color: '#E4405F'
+    icon: <FaInstagram />
   },
   {
     name: 'TikTok',
     url: 'https://www.tiktok.com/@blurrysadgirl',
-    icon: <FaTiktok />,
-    color: '#000000'
+    icon: <FaTiktok />
   },
   {
     name: 'Twitter',
     url: 'https://x.com/blurrysadgirl',
-    icon: <FaTwitter />,
-    color: '#1DA1F2'
+    icon: <FaTwitter />
   },
   {
     name: 'Facebook',
     url: 'https://www.facebook.com/profile.php?id=100010502029208',
-    icon: <FaFacebook />,
-    color: '#1877F2'
+    icon: <FaFacebook />
+  }
+]
+
+const primaryLinks = [
+  {
+    name: 'Amazon',
+    url: 'https://www.amazon.com/shop/blurrysadgirl',
+    icon: <FaAmazon />
+  },
+  {
+    name: '$10 Off Brick Sewer - Code: blurrysadgirl',
+    url: 'https://bricksewer.com/?sca_ref=11103185.WfjMcqQs88',
+    icon: <img src="/brick_sewer_logo.webp" alt="" />
+  },
+  {
+    name: '$200 to spend on Whatnot',
+    url: 'https://www.whatnot.com/invite/blurrysadgirl',
+    icon: <img src="/logo.webp" alt="" />
+  },
+  {
+    name: 'Up for Trade / In Search Of',
+    to: '/up-for-trade',
+    icon: <FaSearch />
   }
 ]
 
@@ -69,6 +68,7 @@ function LinkButton({ link }) {
       <span className="link-name">{link.name}</span>
     </>
   )
+
   if (link.to) {
     return (
       <Link to={link.to} className="link-button">
@@ -76,6 +76,7 @@ function LinkButton({ link }) {
       </Link>
     )
   }
+
   return (
     <a href={link.url} className="link-button" target="_blank" rel="noopener noreferrer">
       {content}
@@ -89,8 +90,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <LinkPageLayout>
-      {socialLinks.map((link, index) => (
+    <LinkPageLayout socialLinks={socialIconLinks}>
+      {primaryLinks.map((link, index) => (
         <LinkButton key={index} link={link} />
       ))}
     </LinkPageLayout>
