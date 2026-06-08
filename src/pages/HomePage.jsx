@@ -47,7 +47,7 @@ const primaryLinks = [
   {
     name: '$10 Off Brick Sewer - Code: blurrysadgirl',
     url: 'https://bricksewer.com/?sca_ref=11103185.WfjMcqQs88',
-    icon: <img src="/brick_sewer_logo.webp" alt="" />
+    icon: <img src="/brick_sewer_logo.avif" alt="" />
   },
   {
     name: '$200 to spend on Whatnot',
